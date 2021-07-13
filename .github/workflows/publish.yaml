@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      
+
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -11,7 +11,7 @@ jobs:
     - name: Install zstd
       run: sudo apt install zstd
 
-    - uses: codio/codio-assessment-publish-action
+    - uses: codio/codio-assessment-publish-action@master
       with:
         client-id: ${{ secrets.CODIO_CLIENT_ID }}
         secret-id: ${{ secrets.CODIO_SECRET_ID }}
