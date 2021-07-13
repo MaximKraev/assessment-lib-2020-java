@@ -1,0 +1,198 @@
+[
+ {
+  "taskId": "parsons-puzzle-1421183550",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-3102792231",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "test-177995859",
+  "points": 0,
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-719640881",
+  "points": 0,
+  "state": {
+   "trashHash": "8_0-4_0-3_0-10_0-9_0-11_0-7_0-6_0-5_0",
+   "solutionHash": "0_0-1_0-2_0",
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "test-944577290",
+  "points": 0,
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-841150249",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-3260813351",
+  "points": 0,
+  "state": {
+   "trashHash": "0_0-1_0-2_0",
+   "solutionHash": "-",
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-3545490727",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "test-721889688",
+  "points": 3,
+  "results": [
+   {
+    "guidance": "```\npublic class StackMain {\n  public static void main(String[] args) {\n    //Instantiate and test your class here!\n  }\n}\n\nclass DIYStack<T> {\n  \n  Node<T> first_node;\n  \n  public DIYStack() {\n    //Fill in the constructor for your stack here if necessary\n    first_node = null;\n  }\n  \n  public void push(Node<T> new_node) {\n    //This method should push a new Node onto the stack\n    if (first_node != null) {\n      first_node.prev = new_node;\n      new_node.next = first_node;\n    }\n    first_node = new_node;\n  }\n  \n  public void push(T value) {\n    //This method should push a value onto the stack (by creating a Node containing the value and pushing that behind the scenes)\n    Node<T> new_node = new Node<T>(value);\n    this.push(new_node);\n  }\n  \n  public T pop() {\n    //This method should pop the next element from the stack\n    Node<T> temp_node = first_node;\n    if (temp_node == null) return null;\n    first_node = first_node.next;\n    if (first_node != null) first_node.prev = null;\n    return temp_node.value;\n  }\n  \n  public T peek() {\n    //This method should return the value of the next element w/o removing it\n    if (first_node == null) return null;\n    return first_node.value;\n  }\n  \n  public String allNodesString() {\n   //This method should return a string containing the values of all the nodes,\n   //starting at the next element to be popped, with a new line between each node\n   Node<T> temp_node = first_node;\n   StringBuilder sb = new StringBuilder();\n   while(temp_node != null) {\n     sb.append(temp_node.value.toString());\n     sb.append(\"\\n\");\n     temp_node = temp_node.next;\n   }\n   return sb.toString();\n  }\n\n}\n\nclass Node<T> {\n  T value;\n  Node<T> prev;\n  Node<T> next;\n  \n  public Node(T val) {\n    value = val;\n  }\n  \n}\n```\n\nThe following solution works because it does the following:\n- Push method correctly pushes a new node onto the stack\n- Pop method correctly pops the first node from the stack & returns its value\n- Peek method correctly returns the first node\n- Pop and peek methods account for possible empty stacks\n- The class uses instances of the existing Node class, and generic types are used throughout\n- Node String method correctly uses a StringBuilder to return a visual representation of the stack in string form\n- The class does not extend another class -- all the implementations are done independently",
+    "format": null,
+    "output": "Yay, you passed!",
+    "timestamp": 1594317892623,
+    "state": "pass"
+   }
+  ]
+ },
+ {
+  "taskId": "parsons-puzzle-3062487147",
+  "points": 3,
+  "state": {
+   "trashHash": "8_0-11_0-5_0-7_0-10_0-12_0-9_0-6_0-13_0",
+   "solutionHash": "0_0-1_0-2_0-3_0-4_0",
+   "toggleStates": "{}"
+  },
+  "results": [
+   {
+    "points": 3,
+    "guidance": "```\nint popped_item = my_stack.pop();\nmy_stack.push(6);\nmy_stack.push(5);\nmy_stack.push(4);\nmy_stack.push(popped_item);\n```\n\nThe following solution works because it does the following:\n- Successfully pops 3 from the top of the stack (and saves it into the variable ```popped_item```)\n- Pushes the next three numbers onto the top of the stack correctly\n- Pushes 3 correctly onto the top of the stack (again, the only line of code available that correctly pushed 3 onto the stack was the one that used ```popped_item```)\n- Does not use queue methods ```.add()``` or ```.remove()``` on a stack\n- Does not try to pass a parameter into ```.pop()```",
+    "trashHash": "5_0-11_0-8_0-9_0-10_0-13_0-7_0-6_0-12_0",
+    "solutionHash": "0_0-1_0-2_0-3_0-4_0",
+    "toggleStates": "{}",
+    "studentCode": "int popped_item = my_stack.pop();\nmy_stack.push(6);\nmy_stack.push(5);\nmy_stack.push(4);\nmy_stack.push(popped_item);",
+    "timestamp": 1594318587856,
+    "state": "pass"
+   }
+  ]
+ },
+ {
+  "taskId": "multiple-choice-261238511",
+  "points": 0,
+  "state": {
+   "active": null
+  },
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-4211865332",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "multiple-choice-850789536",
+  "points": 0,
+  "state": {
+   "active": null
+  },
+  "results": []
+ },
+ {
+  "taskId": "test-3209677885",
+  "points": 3,
+  "results": [
+   {
+    "guidance": "Here is one possible solution:\n\n```java\npublic class CreateNode {\n  public static void main(String[] args) {\n    //Test-call your method here!\n  }\n  \n  public static String nodeName() {\n    //Your Code Here\n    Node my_node = new Node(\"Maria\", null);\n    return my_node.name;\n  }\n  \n  static class Node {\n    //Make sure you assign values to the below instance variables in your constructor!\n    String name;\n    Node next;\n    \n    Node(String name, Node next) {\n      this.name = name;\n      this.next = next;\n    }\n  }\n}\n```\n\nNote that this example does the following:\n- Creates a `Node` class\n- Defines a constructor that assigns `this.name` and `this.next`\n- Uses the constructor properly and assigns it to a variable\n- Returns the ```name``` property of the object",
+    "format": null,
+    "output": "Yay, you passed!",
+    "timestamp": 1594653302989,
+    "state": "pass"
+   }
+  ]
+ },
+ {
+  "taskId": "parsons-puzzle-1960820777",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-2254331987",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "fill-in-the-blanks-2870517312",
+  "points": 0,
+  "state": {
+   "active": []
+  },
+  "results": []
+ },
+ {
+  "taskId": "parsons-puzzle-3984379649",
+  "points": 0,
+  "state": {
+   "trashHash": null,
+   "solutionHash": null,
+   "toggleStates": "{}"
+  },
+  "results": []
+ },
+ {
+  "taskId": "code-output-compare-1708414224",
+  "points": 0,
+  "results": []
+ },
+ {
+  "taskId": "test-3048470230",
+  "points": 0,
+  "results": []
+ },
+ {
+  "taskId": "test-1893222749",
+  "points": 0,
+  "results": []
+ }
+]

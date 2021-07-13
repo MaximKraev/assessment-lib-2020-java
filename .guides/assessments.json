@@ -1,0 +1,1482 @@
+[
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-1421183550",
+  "source": {
+   "name": "Creating Arrays",
+   "showName": true,
+   "instructions": "Rearrange the code to create an array of all the odd numbers between 0 and 30 (inclusive). Print the third item of the array when you are done. (Assume the code is part of the main() method.)",
+   "initial": "int[] oddNums = new int[15]; int x = 1;\nfor (int i = 0; i < 15; i++) {\n  oddNums[i] = x;\n  x += 2;\n}\nSystem.out.println(oddNums[2]);\nSystem.out.println(oddNums[3]);   #distractor\nint[] oddNums = new int[];   #distractor\nint oddNums = new int 15;   #distractor\nint[] oddNums = [15];   #distractor\noddNums[i] = i;   #distractor\nfor (int i = 0; i < 30; i++) {   #distractor\nSystem.out.println(oddNums);   #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "This code starts by creating an array of size 15 (30/2 = 15 odd numbers). Note that this is done with the code ```int[] oddNums = new int[15]```, being sure to specify the data type and size of the array. Then, the code uses a for loop and a counting variable ```x``` to fill each index of the array with the next successive odd number. (There are a lot of ways to do this part, but none of the other ways were included in the options here.) Finally, it prints out the third element, which is index 2 because array indices begin at 0.",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Basic Manipulation in Arrays"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Arrays"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT use a for loop to create an array with a range of odd numbers."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-3102792231",
+  "source": {
+   "name": "Editing Array Values",
+   "showName": true,
+   "instructions": "Rearrange the following code so that the elements of the array ```my_array``` are the following numbers, in order: \n\n```\n42\n37\n9\n3\n215\n6\n```\n\nAssume the code is part of the main method. You must only initialize the array once.\n\nMake sure to edit the indices of the array IN ASCENDING ORDER in order to pass the autograder. ",
+   "initial": "int[] my_array = {1, 2, 3, 4, 5, 6};\nmy_array[0] *= 42;\nmy_array[1] = 37;\nmy_array[2] += 6;\nmy_array[3]--;\nmy_array[4] = 215;\nmy_array[0] = 24;   #distractor\nmy_array[0] *= 72;   #distractor\nmy_array[1] = my_array[2] + 2;   #distractor\nmy_array[2] = 64;   #distractor\nmy_array.append(37);  #distractor\nmy_array += 3;  #distractor\nmy_array = new array {42};   #distractor\nmy_array[5] *= 100;   #distractor\nmy_array[4] = 3;   #distractor\nmy_array[6] = 6;   #distractor\nmy_array[5] *= my_array[6];   #distractor\nmy_array[0] = 0;   #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "```\nint[] my_array = {1, 2, 3, 4, 5, 6};\nmy_array[0] *= 42;\nmy_array[1] = 37;\nmy_array[2] += 6;\nmy_array[3]--;\nmy_array[4] = 215;\n```\n\nThese pieces of code make the right modifications to the array values so that the final result is {42, 37, 9, 3, 215, 6}. Note that indices start at 0 and that you can use operators such as *= and += on array indices.",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Editing Array values"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Arrays"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT modify an array to certain requirements."
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-177995859",
+  "source": {
+   "name": "Creating ArrayLists",
+   "showName": true,
+   "instructions": "Write a program that executes the following steps in order:\n- Create an ArrayList of Integers called my_array_list.\n- Add the numbers 93 and 321 to it in that order. \n- Print the second element in the list. \n- Then remove 321 from the list. \n- Add 73, 42, and 16. \n- Print the third element in the list.",
+   "command": "python3 .guides/secure/helper_script.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "```\nimport java.util.*;\nimport java.io.*;\n\npublic class CreateArrayList {\n  public static void main(String[] args) throws IOException {\n    int result1, result2;\n    \n    //Save the first number you print into result1.\n    //Save the second number you print into result2.\n    \n    ArrayList<Integer> my_array_list = new ArrayList<>();\n    my_array_list.add(93);\n    my_array_list.add(321);\n    result1 = my_array_list.get(1);\n    System.out.println(result1);\n    my_array_list.remove(my_array_list.indexOf(321));\n    my_array_list.add(73);\n    my_array_list.add(42);\n    my_array_list.add(16);\n    result2 = my_array_list.get(2);\n    System.out.println(result2);\n    \n    //DO NOT TOUCH THE BELOW CODE!\n    PrintWriter pw = new PrintWriter(new FileWriter(\"output.txt\"));\n    pw.println(result1);\n    pw.println(result2);\n    pw.close();\n  }\n\n}\n```\n\nThis solution uses the following ArrayList methods to follow each of the steps described in order.\n- .add() in order to add new elements\n- .get() in order to retrieve and print out certain elements (although there were a couple ways you could have done this)\n- .remove() in order to remove elements",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Creating ArrayLists"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "ArrayLists"
+     }
+    ],
+    "files": [
+     "code/CreateArrayList.java",
+     ".guides/secure/ALCodeTest.java",
+     ".guides/secure/helper_script.py",
+     ".guides/secure/run.sh",
+     ".guides/secure/test.sh"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/CreateArrayList.java"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT create and make modifications to an ArrayList."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-719640881",
+  "source": {
+   "name": "Birthday ArrayList",
+   "showName": true,
+   "instructions": "Rearrange the below code so that the characters in the ArrayList charAL spell out ```HAPPY BIRTHDAY```. Then, print out the letter D using the ArrayList .get() method. (Assume the code is part of the main() method and all requisite libraries are imported.)",
+   "initial": "ArrayList<Character> charAL = new ArrayList<>();\nfor (char c : \"HAPPY BIRTHDAY\".toCharArray()) charAL.add(c);\nSystem.out.println(charAL.get(charAL.indexOf('D')));\nArrayList<> charAL = new ArrayList<>();                    #distractor\nfor (String c : \"HAPPY BIRTHDAY\") charAL.add(c);                    #distractor\nSystem.out.println(charAL.get(\"D\"));                    #distractor\nchar[] hbd = (char[])hbdString;            #distractor\nString hbdString = \"happy birthday!\";         #distractor\nSystem.out.println(charAL);                    #distractor\nArrayList<Character> charAL = hbdString.toArrayList();             #distractor\nArrayList<Character> charAL = \"HAPPY BIRTHDAY\".toArrayList();           #distractor\nArrayList<Character> charAL = new ArrayList<>(\"HAPPY BIRTHDAY\");                    #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "```\nArrayList<Character> charAL = new ArrayList<>();\nfor (char c : \"HAPPY BIRTHDAY\".toCharArray()) charAL.add(c);\nSystem.out.println(charAL.get(charAL.indexOf('D')));\n```\n\nThis solution works because it:\n- Initializes the ArrayList correctly (using data type and the ```new``` keyword)\n- Uses a string and a char[] correctly to transfer the characters into the ArrayList (For a shortcut, you could have also used a method like Arrays.asList(), but that wasn't an option here.)\n- Prints the letter D by using the .get() method with the index of D as a parameter.",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Creating ArrayLists"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "ArrayLists"
+     }
+    ],
+    "files": [
+     "code/CreateArrayList.java"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT make an ArrayList of the characters in Happy Birthday and then printing out a certain letter from the list."
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-944577290",
+  "source": {
+   "name": "Array Conversion",
+   "showName": true,
+   "instructions": "Given a ```String[] args``` of any size in which each position is held by a random number, write a function ```arrayConverter()``` that will do the following:\n- Create an int[] that stores each of these numbers multiplied by 3 (you'll have to convert them to ints first, of course). \n- Return the sixth element of this array. ",
+   "command": "python .guides/secure/arrays_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "```\nimport java.util.*;\n\npublic class ArrayConversion {\n  public static void main(String[] args) {\n    arrayConverter(args);//Use this for testing! Don't put anything else in the main method -- all your code should be in arrayConverter().\n  }\n  static int arrayConverter(String[] args) {\n    int[] randomNums = new int[args.length];\n    for (int i = 0; i < args.length; i++) {\n      randomNums[i] = Integer.parseInt(args[i])*3;\n    }\n    return randomNums[5];\n  }\n}\n```\n\nThis is one possible solution. It creates a new int array of the same length as ```args```, and uses ```Integer.parseInt()``` to convert the strings to integers, after which it multiplies them by 3. It correctly recognizes that the sixth number in the array would actually be at index 5 and returns that number accordingly. ",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Array Manipulation"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Arrays"
+     }
+    ],
+    "files": [
+     "code/ArrayConversion.java",
+     ".guides/secure/ArrayCodeTest.java",
+     ".guides/secure/arrays.sh",
+     ".guides/secure/arrays_helper.py",
+     ".guides/secure/ArrayTryIt.java",
+     ".guides/secure/runArrayConversion.sh",
+     ".guides/secure/try_it_helper.py"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/ArrayConversion.java"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT convert a String[] to an int[] and return a certain element."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-3545490727",
+  "source": {
+   "name": "Retrieving the Next Node",
+   "showName": true,
+   "instructions": "Given the following Node class, use the code snippets to make a `getNextNode()` method that returns the next node connected to the current one.\n\n```java\nstatic class Node {\n   int data;\n   Node nextNode;\n   Node(int d, Node next=null) {\n      data = d;\n      nextNode = next;\n   }\n}\n```",
+   "initial": "Node getNextNode() {\n  return this.nextNode;\n}\nreturn this.next;      #distractor\nreturn this.data;      #distractor\nreturn data;     #distractor\nint getNextNode() {   #distractor\npublic static void getNextNode() {   #distractor\nreturn Node;   #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":3,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "To find the next node connected to the current one, the function must return the `next` instance variable of the Node object. In Java, this is done by returning this.nextNode.",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Retrieving Next Node"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT utilize a Node class to retrieve the next node of a linked list."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-841150249",
+  "source": {
+   "name": "Adding Elements to Linked Lists",
+   "showName": true,
+   "instructions": "Fill in the missing lines of code. ```InsertAfter()``` is a method that takes two parameters: ```data```, the data to be added to the list and ```ExistingNode```, a node that already exists in the list. ```InsertAfter()``` should add a node containing ```data``` to the linked list, after ```ExistingNode```.\n\n```java\nvoid InsertAfter(int data, Node ExistingNode) {\n   Node NewNode = new Node(data);\n   //your code goes here\n}\n```",
+   "initial": "NewNode.nextVal = ExistingNode.nextVal;\nExistingNode.nextVal = NewNode;\nNewNode.nextVal = null;         #distractor\nExistingNode.nextVal =  null;         #distractor\nNewNode = Node;         #distractor\nExistingNode = NewNode.nextVal;    #distractor\nExistingNode = NewNode; #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "The following solution works because:\n- First, the new node will point to what the existing node in the list used to point to.\n- Next, the existing node will point to the new element instead.\n\n```java\nvoid InsertAfter(int data, Node ExistingNode) {\n   Node NewNode = new Node(data);\n   NewNode.nextVal = ExistingNode.nextVal;\n   ExistingNode.nextVal = NewNode;\n}\n```",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Adding Elements to Linked Lists"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [
+     "code/create_node.py"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT insert elements into linked lists in Java"
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-3260813351",
+  "source": {
+   "name": "Removing Elements from Linked Lists",
+   "showName": true,
+   "instructions": "Fill in the missing lines of code. RemoveNode() is a method that takes two parameters: ExistingNode, a node to remove from the list, and PrevNode, the node that comes before ExistingNode.\n\n```java\npublic void RemoveNode(Node ExistingNode, Node PrevNode) {\n   //Your code goes here\n   ExistingNode = null;\n}\n``` \n\n\n\n\n\n",
+   "initial": "PrevNode.nextVal = ExistingNode.nextVal;\nPrevNode.nextVal = null;        #distractor\nExistingNode.nextVal = PrevNode.nextVal;        #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "The following solution sets the previous node's ```.nextVal``` to the next node after ExistingNode, effectively changing the sequence so it skips the one we want to remove.\n\n\n```java\npublic void RemoveNode(Node ExistingNode, Node PrevNode) {\n   PrevNode.nextVal = ExistingNode.nextVal;\n   ExistingNode = null;\n}\n``` ",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Removing Elements from Linked Lists"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT remove an element from a linked list in Java"
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-2380238144",
+  "source": {
+   "name": "Basic to arrays",
+   "showName": true,
+   "instructions": "An array is a collection of items stored at ______ memory locations.",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "187bb0be-e6ab-9515-03b0-bc89be15970e",
+     "correct": true,
+     "answer": "contiguous"
+    },
+    {
+     "_id": "bfb62fd4-3a63-ad0c-3a8b-cfe69f90c785",
+     "correct": false,
+     "answer": "moving"
+    },
+    {
+     "_id": "56b45f8d-af5c-8e0c-95c0-c90e6f2923ea",
+     "correct": false,
+     "answer": "non-permanent"
+    },
+    {
+     "_id": "a3fd160a-8c4d-0a90-edbe-9e19d0d011ac",
+     "correct": false,
+     "answer": "non-existing"
+    }
+   ],
+   "guidance": "",
+   "showGuidanceAfterResponse": false,
+   "showExpectedAnswer": true,
+   "points": 20,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "arrays"
+     },
+     {
+      "name": "Content",
+      "value": "Basic info to array"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "1",
+   "learningObjectives": "SWBAT understand array memory location"
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-3729001918",
+  "source": {
+   "name": "Array memory storing",
+   "showName": true,
+   "instructions": "What kind of variable will arrays store?",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "38e41e5a-a7e0-0ff0-6f05-7fcbc8846cea",
+     "correct": true,
+     "answer": "type"
+    },
+    {
+     "_id": "f254cd52-94de-790d-263c-61f223c5128b",
+     "correct": false,
+     "answer": "name"
+    },
+    {
+     "_id": "ae1eb9f3-97a1-2344-aefd-0a7f2708292f",
+     "correct": false,
+     "answer": "boolean"
+    },
+    {
+     "_id": "ce0b18ff-7825-ff16-4932-338b1a0107f5",
+     "correct": false,
+     "answer": "interger"
+    }
+   ],
+   "guidance": "A variable of the same type will is are variables that are either whole numbers, text, or decimals.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 20,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Arrays storage "
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "basic to array storage"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT understand the between types of variables"
+  }
+ },
+ {
+  "type": "fill-in-the-blanks",
+  "taskId": "fill-in-the-blanks-1574884692",
+  "source": {
+   "name": "Array index",
+   "showName": true,
+   "instructions": "Based on what you please fill in the blank.",
+   "text": "In most programming language an array index will start at the #<<<0>>>.",
+   "guidance": "The first element of most programming languages will start at 0. If you are putting 10 elements in the array then the last element will have a location 9. ",
+   "showGuidanceAfterResponse": false,
+   "showExpectedAnswer": true,
+   "points": 2,
+   "showValues": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Fill in the Blanks"
+     },
+     {
+      "name": "Content",
+      "value": "Array Length"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Array location dynamic"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT understand the location of data in an array.",
+   "tokens": {
+    "blank": [
+     "0"
+    ],
+    "text": [
+     "In most programming language an array index will start at the #",
+     0,
+     "."
+    ],
+    "regexPositions": []
+   }
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-1368831604",
+  "source": {
+   "name": "Use of arrays",
+   "showName": true,
+   "instructions": "Why do we need arrays? (select all that apply)",
+   "multipleResponse": true,
+   "answers": [
+    {
+     "_id": "ac48c168-fdfb-06f7-3f74-ebdfe82de344",
+     "correct": true,
+     "answer": "Store a numbered collection of similar data"
+    },
+    {
+     "_id": "dc304da2-7a77-a666-ab8d-6b947558e2ad",
+     "correct": true,
+     "answer": "Iteration through contiguous elements is fast"
+    },
+    {
+     "_id": "9802be84-673f-c30c-84c3-ec9b22f1ec93",
+     "correct": true,
+     "answer": "Adding and removing elements from the end of the array is also fast"
+    },
+    {
+     "_id": "a5a21065-803b-acf6-eaa4-5f88fbde114c",
+     "correct": false,
+     "answer": "for a better understanding of decision making from the CPU."
+    }
+   ],
+   "guidance": "",
+   "showGuidanceAfterResponse": false,
+   "showExpectedAnswer": true,
+   "points": 20,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Fixed array definition"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "arrays"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "1",
+   "learningObjectives": "SWBAT remember what are the uses of an array"
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-3984379649",
+  "source": {
+   "name": "Adding to Hash Tables",
+   "showName": true,
+   "instructions": "Rearrange the following code blocks to do the following:\n- Initialize a HashTable ```student_nums``` of students' names and ID numbers. \n- Then add 3 students (Jane, John, and Sarah).\n**IMPORTANT:** First add Jane, then add John, and then add Sarah.",
+   "initial": "Hashtable<String, Integer> student_nums = new Hashtable<String, Integer>();\nstudent_nums.put(\"Jane\", 498);\nstudent_nums.put(\"John\", 132);\nstudent_nums.put(\"Sarah\", 396);\nstudent_nums.add(\"Jane\", 498);      #distractor\nstudent_nums += (\"Sarah\", 396);      #distractor\nstudent_nums = (\"Jane\", 498);   #distractor\nstudent_nums = add(\"Sarah\", 396);   #distractor\nstudent_nums = new Hashtable<\"Jane\", 498>;   #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "```\nHashtable<String, Integer> student_nums = new Hashtable<String, Integer>();\nstudent_nums.put(\"Jane\", 498);\nstudent_nums.put(\"John\", 132);\nstudent_nums.put(\"Sarah\", 396);\n```\nThis answer is correct because it initializes the Hashtable correctly using data types, and uses the correct method (.put()) to add items to it.",
+   "showGuidanceAfterResponse": true,
+   "points": 1,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Adding to Dictionaries"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Hash Tables"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT identify the right ways to add items to a hash table."
+  }
+ },
+ {
+  "type": "code-output-compare",
+  "taskId": "code-output-compare-1708414224",
+  "source": {
+   "name": "Using Java HashTables",
+   "showName": true,
+   "instructions": "Given a HashTable that maps students to their favorite numbers, print out Jane's favorite number. If Jane is not in the list of students, ensure that your program prints ```null```.",
+   "command": "sh .guides/secure/hash.sh",
+   "preExecuteCommand": "",
+   "arePartialPointsAllowed": false,
+   "guidance": "```\nimport java.util.*;\nimport java.io.*;\n\npublic class FindHashTable {\n  public static void main (String[] args) {\n    \n    //INPUT CODE -- don't modify!\n    Hashtable<String, Integer> fave_nums = new Hashtable<String, Integer>();\n    for (int i = 0; i < args.length; i += 2) {\n      fave_nums.put(args[i], Integer.parseInt(args[i + 1]));\n    }\n    \n    //Your code here (the Hashtable is called fave_nums)\n    System.out.println(fave_nums.get(\"Jane\"));\n    \n  }\n\n}\n```\n\nThe above solution calls the ```.get()``` method on the Hashtable. This method automatically returns ```null``` if the requested key is not on the list. ",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "options": {
+    "ignoreCase": true,
+    "ignoreWhitespaces": true,
+    "ignoreNewline": true,
+    "matchSubstring": false,
+    "timeout": 30
+   },
+   "showExpectedAnswer": true,
+   "sequence": [
+    {
+     "arguments": "John 583 Jane 290 Sarah 632",
+     "input": "",
+     "output": "290",
+     "showFeedback": false,
+     "feedback": ""
+    },
+    {
+     "arguments": "Jane 557 John 109 Sarah 376 Jim 428",
+     "input": "",
+     "output": "557",
+     "showFeedback": false,
+     "feedback": ""
+    },
+    {
+     "arguments": "John 578 Sarah 234 Bob 129",
+     "input": "",
+     "output": "null",
+     "showFeedback": false,
+     "feedback": ""
+    }
+   ],
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Standard Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Finding in Hash Tables"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Hash Tables"
+     }
+    ],
+    "files": [
+     "code/FindHashTable.java",
+     ".guides/secure/hash.sh"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/FindHashTable.java"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT call .get() on a HashTable."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-3062487147",
+  "source": {
+   "name": "Push & Pop",
+   "showName": true,
+   "instructions": "You are given a Stack, my_stack, that looks like this:\n\n```\n3\n2\n1\n```\n\n(It would print out like ```[1, 2, 3]```.)\n\nRearrange the following blocks of code so that the stack looks like this:\n\n```\n3\n4\n5\n6\n2\n1\n```\n(It should print out like ```[1, 2, 6, 5, 4, 3]```.)\n",
+   "initial": "int popped_item = my_stack.pop();\nmy_stack.push(6);\nmy_stack.push(5);\nmy_stack.push(4);\nmy_stack.push(popped_item);\nmy_stack.pop(1); #distractor\nmy_stack.pop(3); #distractor\nmy_stack.add(3); #distractor\nmy_stack.add(4); #distractor\nmy_stack.add(5); #distractor\nmy_stack.add(6); #distractor\nmy_stack += 3; #distractor\nmy_stack.push(my_stack.empty()); #distractor\nmy_stack.remove(3); #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "```\nint popped_item = my_stack.pop();\nmy_stack.push(6);\nmy_stack.push(5);\nmy_stack.push(4);\nmy_stack.push(popped_item);\n```\n\nThe following solution works because it does the following:\n- Successfully pops 3 from the top of the stack (and saves it into the variable ```popped_item```)\n- Pushes the next three numbers onto the top of the stack correctly\n- Pushes 3 correctly onto the top of the stack (again, the only line of code available that correctly pushed 3 onto the stack was the one that used ```popped_item```)\n- Does not use queue methods ```.add()``` or ```.remove()``` on a stack\n- Does not try to pass a parameter into ```.pop()```",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Stack Manipulation"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Stacks"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT call .push() and .pop() on a stack."
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-261238511",
+  "source": {
+   "name": "Searching in Stacks",
+   "showName": true,
+   "instructions": "Which of the following is the correct way to get the position of an item ```a``` in the stack ```stack1```?",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "82b2ae72-1086-1ed5-5cff-6b19851565ca",
+     "correct": false,
+     "answer": "```System.out.println(stack1.a);```"
+    },
+    {
+     "_id": "b44affe8-df59-6261-603d-0d2b0c490ead",
+     "correct": false,
+     "answer": "```System.out.println(stack1.find(a));```"
+    },
+    {
+     "_id": "662c0ebe-32fa-6e66-b761-64f4f78f3aee",
+     "correct": false,
+     "answer": "```System.out.println(stack1.get(a));```"
+    },
+    {
+     "_id": "213136c0-d07e-1a5a-209d-f42de1fef728",
+     "correct": true,
+     "answer": "```System.out.println(stack1.search(a));```"
+    }
+   ],
+   "guidance": "```\nSystem.out.println(stack1.search(a));\n```\nThe following answer correctly calls the ```.search()``` method on the stack with ```a``` as a parameter.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Stack Manipulation"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Stacks"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "1",
+   "learningObjectives": "SWBAT recall how to search a stack."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-4211865332",
+  "source": {
+   "name": "Add & Remove",
+   "showName": true,
+   "instructions": "You are given a Queue, my_queue, that looks like this:\n\n```\n3\n2\n1\n```\n\n(It would print out like ```[1, 2, 3]```.)\n\nRearrange the following blocks of code so that the queue looks like this:\n\n```\n1\n4\n5\n6\n3\n2\n```\n(It should print out like ```[2, 3, 6, 5, 4, 1]```.)\n",
+   "initial": "int removed_item = my_queue.remove();\nmy_queue.add(6);\nmy_queue.add(5);\nmy_queue.add(4);\nmy_queue.add(removed_item);\nmy_queue.push(6);  #distractor\nmy_queue.push(5);  #distractor\nmy_queue.push(4);  #distractor\nmy_queue.push(1);  #distractor\nmy_queue.remove(1);  #distractor\nmy_queue.remove(3);  #distractor\nmy_queue.pop();  #distractor\nmy_queue.pop(1);  #distractor\nmy_queue.add();  #distractor\nmy_queue = my_queue.pop();  #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "```\nint removed_item = my_queue.remove();\nmy_queue.add(6);\nmy_queue.add(5);\nmy_queue.add(4);\nmy_queue.add(removed_item);\n```\nThe above solution works because it does the following:\n- Successfully removes 1 from the start of the queue (and saves it into the variable removed_item)\n- Adds the next 3 elements in their correct order\n- Adds 1 back into the queue (the only line that accomplished this was the one that used removed_item)\n- Does not use stack methods ```.push()``` or ```.pop()```\n- Uses parameters accurately (uses them on ```.add()```, but not on ```.remove()```)\n",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Queue Manipulation"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Queues"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT add and remove elements in a queue."
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-850789536",
+  "source": {
+   "name": "First Element",
+   "showName": true,
+   "instructions": "Which of the following will get the first element in a queue ```my_queue```, *and return null if the queue is empty*?",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "d46cdc04-c1fd-bd70-145c-c25ce3cded84",
+     "correct": false,
+     "answer": "System.out.println(my_queue.first());"
+    },
+    {
+     "_id": "68dd3efa-226f-e6c3-e142-b063d9ab6e26",
+     "correct": true,
+     "answer": "System.out.println(my_queue.peek());"
+    },
+    {
+     "_id": "38e511cd-8753-4db9-0715-abd5fd7a128a",
+     "correct": false,
+     "answer": "System.out.println(my_queue[0]);"
+    },
+    {
+     "_id": "606455f3-569e-29f0-be29-9c44fa2d8be2",
+     "correct": false,
+     "answer": "System.out.println(my_queue.element());"
+    }
+   ],
+   "guidance": "```\nSystem.out.println(my_queue.peek());\n```\nThe correct method to return the first element or \"head\" of the queue, and return null in an empty queue, is ```.peek()```. ```.element()``` will also return the head of the queue, but it throws an exception if there are no elements in the queue.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Queue Manipulation"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Queues"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "1",
+   "learningObjectives": "SWBAT recall how to get the first element in a queue."
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-721889688",
+  "source": {
+   "name": "Creating a Stack",
+   "showName": true,
+   "instructions": "Fill in the following class DIYStack to create a fully functional stack. For this exercise, you must implement the methods yourself -- extending another class will result in code not passing the autograder. For the ```.pop()``` and ```.peek()``` methods, ensure that your code will return a ```null``` value if the stack is empty. Each method has more specific instructions written in a comment. For this implementation, you will need to store each element in a Node so that users can push either fully formed Nodes or other data types onto the stack. You are given the Node class, as well as more specific instructions in the two ```.push()``` methods.",
+   "command": "python .guides/secure/stack_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "```\npublic class StackMain {\n  public static void main(String[] args) {\n    //Instantiate and test your class here!\n  }\n}\n\nclass DIYStack<T> {\n  \n  Node<T> first_node;\n  \n  public DIYStack() {\n    //Fill in the constructor for your stack here if necessary\n    first_node = null;\n  }\n  \n  public void push(Node<T> new_node) {\n    //This method should push a new Node onto the stack\n    if (first_node != null) {\n      first_node.prev = new_node;\n      new_node.next = first_node;\n    }\n    first_node = new_node;\n  }\n  \n  public void push(T value) {\n    //This method should push a value onto the stack (by creating a Node containing the value and pushing that behind the scenes)\n    Node<T> new_node = new Node<T>(value);\n    this.push(new_node);\n  }\n  \n  public T pop() {\n    //This method should pop the next element from the stack\n    Node<T> temp_node = first_node;\n    if (temp_node == null) return null;\n    first_node = first_node.next;\n    if (first_node != null) first_node.prev = null;\n    return temp_node.value;\n  }\n  \n  public T peek() {\n    //This method should return the value of the next element w/o removing it\n    if (first_node == null) return null;\n    return first_node.value;\n  }\n  \n  public String allNodesString() {\n   //This method should return a string containing the values of all the nodes,\n   //starting at the next element to be popped, with a new line between each node\n   Node<T> temp_node = first_node;\n   StringBuilder sb = new StringBuilder();\n   while(temp_node != null) {\n     sb.append(temp_node.value.toString());\n     sb.append(\"\\n\");\n     temp_node = temp_node.next;\n   }\n   return sb.toString();\n  }\n\n}\n\nclass Node<T> {\n  T value;\n  Node<T> prev;\n  Node<T> next;\n  \n  public Node(T val) {\n    value = val;\n  }\n  \n}\n```\n\nThe following solution works because it does the following:\n- Push method correctly pushes a new node onto the stack\n- Pop method correctly pops the first node from the stack & returns its value\n- Peek method correctly returns the first node\n- Pop and peek methods account for possible empty stacks\n- The class uses instances of the existing Node class, and generic types are used throughout\n- Node String method correctly uses a StringBuilder to return a visual representation of the stack in string form\n- The class does not extend another class -- all the implementations are done independently",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Creating/Designing Stacks"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Stacks"
+     }
+    ],
+    "files": [
+     "code/StackMain.java",
+     ".guides/secure/runstack.sh",
+     ".guides/secure/stack_helper.py",
+     ".guides/secure/StackCodeTest.java",
+     ".guides/secure/stacks.sh"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/StackMain.java"
+     },
+     {
+      "type": "terminal",
+      "panelNumber": 1,
+      "content": ""
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT implement a Stack data structure"
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-3209677885",
+  "source": {
+   "name": "Creating a Node",
+   "showName": true,
+   "instructions": "Write a program that defines a linked list node that holds a name. Your program should do the following:\n- Define a `Node` class with instance variables `name` (a String) and `next` (another Node).\n- Define a constructor that accepts the `name` and `next` parameters in that order, and assigns them to the instance variables.\n- In the method ```nodeName()```, do the following:\n   - Create a linked list of one node that holds the name \"Maria\".\n   - Return the name of the node.\n",
+   "command": "python .guides/secure/create_node_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "Here is one possible solution:\n\n```java\npublic class CreateNode {\n  public static void main(String[] args) {\n    //Test-call your method here!\n  }\n  \n  public static String nodeName() {\n    //Your Code Here\n    Node my_node = new Node(\"Maria\", null);\n    return my_node.name;\n  }\n  \n  static class Node {\n    //Make sure you assign values to the below instance variables in your constructor!\n    String name;\n    Node next;\n    \n    Node(String name, Node next) {\n      this.name = name;\n      this.next = next;\n    }\n  }\n}\n```\n\nNote that this example does the following:\n- Creates a `Node` class\n- Defines a constructor that assigns `this.name` and `this.next`\n- Uses the constructor properly and assigns it to a variable\n- Returns the ```name``` property of the object",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Creating a Node"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [
+     "code/CreateNode.java",
+     ".guides/secure/create_node.sh",
+     ".guides/secure/create_node_helper.py",
+     ".guides/secure/CreateNodeCT.java"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/CreateNode.java"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT create a node class in Java"
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-1960820777",
+  "source": {
+   "name": "Using Nodes to Make a Linked List",
+   "showName": true,
+   "instructions": "Order the following code snippets to create a linked list with 5 nodes.\n\n**Note:** The contract of the Node constructor is `new Node(T data, Node next)`.",
+   "initial": "Node node_150 = new Node(150, None);\nNode node_10 = new Node(10, node_150);\nNode node_204 = new Node(204, node_10);\nNode node_109 = new Node(109, node_204);\nNode node_90 = new Node(90, node_109);",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "The code should look like:\n```python\nNode node_150 = new Node(150, None);\nNode node_10 = new Node(10, node_150);\nNode node_204 = new Node(204, node_10);\nNode node_109 = new Node(109, node_204);\nNode node_90 = new Node(90, node_109);\n```\n\nThe `next` parameter of each constructor call should contain the next node in the linked list. As each node is assigned to a variable, the node must be created before another constructor uses it. The linked list is essentially created backward, with the first node being 90 and ending with 150. The last node's `next` should be `None` because it should not link to another node. ",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Creating Linked Lists"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [
+     "code/create_node.py"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT use nodes to create a linked list"
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-2254331987",
+  "source": {
+   "name": "Creating a Linked List",
+   "showName": true,
+   "instructions": "Order the code snippets to create a linked list class with a constructor. The constructor should take in one node as the linked list's head node.",
+   "initial": "static class LinkedList {\n  Node head;\n  LinkedList(Node head_node) {\n    head = head_node;\n  }\n}\nLinkedList() {     #distractor\nhead = None;   #distractor",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
+   "grader": "1",
+   "guidance": "The code should look like the following:\n```java\nstatic class LinkedList {\n  Node head;\n  LinkedList(Node head_node) {\n    head = head_node;\n  }\n}\n```\n\nNote that the constructor must take in a node to use as the head of the linked list. The constructor here does that by having `head_node` as a parameter and assigning `head` to it.",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Creating a Linked List"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [
+     "code/create_node.py"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT create a linked list class in Java"
+  }
+ },
+ {
+  "type": "fill-in-the-blanks",
+  "taskId": "fill-in-the-blanks-2870517312",
+  "source": {
+   "name": "Using the Node Class to Create a Linked List",
+   "showName": true,
+   "instructions": "Given the following contract, fill in the blank to create a linked list of length 4.\n\n```java\nnew Node(T data, Node next_node)\n```",
+   "text": "Node last_node = new Node(\"Yellow\", <<<null>>>);\nNode 3_node = new Node(\"Green\", <<<last_node>>>);\nNode 2_node = new Node(\"Blue\", <<<3_node>>>);\nNode first_node = new Node(\"Red\", <<<2_node>>>);",
+   "guidance": "Each node's constructor should take in the previously created node to form the linked list.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "showValues": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Fill in the Blanks"
+     },
+     {
+      "name": "Content",
+      "value": "Creating Linked Lists"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Linked Lists"
+     }
+    ],
+    "files": [
+     "code/create_node.py"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "1",
+   "learningObjectives": "SWBAT recognize nodes' dependency on other nodes",
+   "tokens": {
+    "blank": [
+     "null",
+     "last_node",
+     "3_node",
+     "2_node"
+    ],
+    "text": [
+     "Node last_node = new Node(\"Yellow\", ",
+     0,
+     ");\nNode 3_node = new Node(\"Green\", ",
+     0,
+     ");\nNode 2_node = new Node(\"Blue\", ",
+     0,
+     ");\nNode first_node = new Node(\"Red\", ",
+     0,
+     ");"
+    ],
+    "regexPositions": []
+   }
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-3048470230",
+  "source": {
+   "name": "Determine whether parentheses are balanced using a stack",
+   "showName": true,
+   "instructions": "When you write code in Codio, Codio will flag parentheses that are not balanced that will prevent your code from working. This an important functionality that many IDEs and compilers use.\n\nWrite a function called `paren_balanced()`\nthat takes in a string of parentheses and returns `True` if the parentheses are balanced, and `False` if they are not.\n\nNote: the string will only consist of `(` and `)` characters.\n\nSample input and output:\n* `()` -> `True`\n* `(())` -> `True`\n* `(())()(())` -> `True`\n* empty string -> `True`\n* `(` -> `False`\n* `))` -> `False`\n\nUse the stack class defined in the starter code in `balanced_paren.py` to solve this problem. \n",
+   "command": "python .guides/secure/balanced_paren_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "Here is one potential solution:\n```java\nstatic boolean paren_balanced(String s) {\n    //Your code here\n    \n    Stack<Character> pstack = new Stack<Character>();\n    \n    int len = s.length();\n    char[] string_s = s.toCharArray();\n    \n    for(int i = 0; i < len; i++) {\n        if (string_s[i] == '(') pstack.push(string_s[i]);\n        if (string_s[i] == ')') { \n          if (pstack.isEmpty()) return false;\n          else {\n            char top_elem = pstack.pop();\n            if (top_elem == ')') return false;\n          } \n        }\n    }\n    return pstack.isEmpty();\n            \n  }\n  \n}\n```\n\nThe solution above works because:\n* The code iterates through the input string. \n* When the code encounters an open parenthesis, the code pushes the parenthesis to the stack. \n* When the code encounters a closed parenthesis, the code checks to see whether a matching open parenthesis is on the top of the stack. If the stack is empty or there is no matching open parenthesis, the code returns False because the input string was not balanced.\n* If the code has iterated through each character of the string and the stack is empty, this means that the parentheses were balanced and the code returns True.\n",
+   "showGuidanceAfterResponse": true,
+   "points": 6,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Determine Balanced Parentheses using Stack"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "Stacks and Queues"
+     }
+    ],
+    "files": [
+     "code/BalancedParen.java",
+     ".guides/secure/balanced_paren_helper.py",
+     ".guides/secure/BalancedParenTest.java",
+     ".guides/secure/paren.sh",
+     ".guides/secure/run_parens.sh"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/BalancedParen.java"
+     },
+     {
+      "type": "terminal",
+      "panelNumber": 1,
+      "content": ""
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "6",
+   "learningObjectives": "SWBAT leverage understanding of stacks to determine whether parentheses are balanced in a string"
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-1345803621",
+  "source": {
+   "name": "Types of Traversal",
+   "showName": true,
+   "instructions": "From the following list, select all the valid methods of tree traversal.",
+   "multipleResponse": true,
+   "answers": [
+    {
+     "_id": "58c6aa42-402c-f432-9a71-e3f0cc15e899",
+     "correct": true,
+     "answer": "Preorder"
+    },
+    {
+     "_id": "dd144daf-c68b-aa49-7061-6084c6e55921",
+     "correct": false,
+     "answer": "Out of order"
+    },
+    {
+     "_id": "f1e23d3c-b7df-035e-c0fe-fa4d5add2352",
+     "correct": false,
+     "answer": "Binary-order"
+    },
+    {
+     "_id": "2690277f-9680-5b6e-56f2-b92339dd13c3",
+     "correct": true,
+     "answer": "Postorder"
+    },
+    {
+     "_id": "f8960359-e58b-21ba-40b0-98d6a2447ac3",
+     "correct": true,
+     "answer": "Inorder"
+    },
+    {
+     "_id": "67415df3-9246-83fe-3ec8-457efd2f1f50",
+     "correct": false,
+     "answer": "Random order"
+    },
+    {
+     "_id": "8b95a59b-5aa5-10fb-f344-b7832d9dc1cd",
+     "correct": true,
+     "answer": "Reverse level order"
+    },
+    {
+     "_id": "fea14bf9-964f-a572-7cdb-0ed21fa44ef0",
+     "correct": true,
+     "answer": "Level order"
+    },
+    {
+     "_id": "7f9a43fe-b05f-6077-e02f-72939ba79038",
+     "correct": false,
+     "answer": "List order"
+    }
+   ],
+   "guidance": "The five types of tree traversals are postorder, preorder, inorder, level order, and reverse level order. ",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Tree Traversal Methods"
+     },
+     {
+      "name": "Programming Language",
+      "value": "N/A"
+     },
+     {
+      "name": "Category",
+      "value": "Trees"
+     }
+    ],
+    "files": [
+     "code/BalancedParen.java"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "1",
+   "learningObjectives": "SWBAT remember the types of tree traversals."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-2440383404",
+  "source": {
+   "name": "Preorder Traversal",
+   "showName": true,
+   "instructions": "Given the following starter code, fill in the missing lines of code so that the tree is traversed using the **preorder** method. (The objective is simply to print out every node in the correct order using this method.)\n\n```java\nstatic void traverseNode(Node starterNode) {\n   //your code here\n}\n```",
+   "initial": "System.out.println(starterNode.value);\nif (starterNode.left != null) traverseNode(starterNode.left);\nif (starterNode.right != null) traverseNode(starterNode.right);",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\"}",
+   "grader": "1",
+   "guidance": "```\nSystem.out.println(starterNode.value);\nif (starterNode.left != null) traverseNode(starterNode.left);\nif (starterNode.right != null) traverseNode(starterNode.right);\n```\nThe following solution visits the node in question first and then traverses its left and right nodes. ",
+   "showGuidanceAfterResponse": true,
+   "points": 2,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Tree Traversal Methods"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Trees"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT understand the preorder method of tree traversal."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-2935220030",
+  "source": {
+   "name": "Postorder Traversal",
+   "showName": true,
+   "instructions": "Given the following starter code, fill in the missing lines of code so that the tree is traversed using the **postorder** method. (The objective is simply to print out every node in the correct order using this method.)\n\n```java\nstatic void traverseNode(Node starterNode) {\n   //your code here\n}\n```",
+   "initial": "if (starterNode.left != null) traverseNode(starterNode.left);\nif (starterNode.right != null) traverseNode(starterNode.right);\nSystem.out.println(starterNode.value);",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\"}",
+   "grader": "1",
+   "guidance": "```java\nif (starterNode.left != null) traverseNode(starterNode.left);\nif (starterNode.right != null) traverseNode(starterNode.right);\nSystem.out.println(starterNode.value);\n```\nThe above solution works because it first recursively traverses the left and right nodes before visiting the node in question itself.",
+   "showGuidanceAfterResponse": true,
+   "points": 2,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Tree Traversal"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Trees"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT understand the postorder method of tree traversal."
+  }
+ },
+ {
+  "type": "parsons-puzzle",
+  "taskId": "parsons-puzzle-3505298214",
+  "source": {
+   "name": "Inorder Traversal",
+   "showName": true,
+   "instructions": "Given the following starter code, fill in the missing lines of code so that the tree is traversed using the **inorder** method. (The objective is simply to print out every node in the correct order using this method.)\n\n```java\nstatic void traverseNode(Node starterNode) {\n   //your code here\n}\n```",
+   "initial": "if (starterNode.left != null) traverseNode(starterNode.left);\nSystem.out.println(starterNode.value);\nif (starterNode.right != null) traverseNode(starterNode.right);",
+   "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\"}",
+   "grader": "1",
+   "guidance": "```\nif (starterNode.left != null) traverseNode(starterNode.left);\nSystem.out.println(starterNode.value);\nif (starterNode.right != null) traverseNode(starterNode.right);\n```\n\nThe above solution works because it traverses the left subtree, visits the node, and then moves onto the right subtree.",
+   "showGuidanceAfterResponse": true,
+   "points": 2,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Parsons Puzzle"
+     },
+     {
+      "name": "Content",
+      "value": "Tree Traversal Methods"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Trees"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT understand the inorder method of tree traversal."
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-1893222749",
+  "source": {
+   "name": "Creating a Queue",
+   "showName": true,
+   "instructions": "Fill in the following class DIYQueue to create a fully functional stack. \n\n**Ensure that your code follows the below requirements:** \n- For this exercise, you must implement the methods yourself – extending another class will result in code not passing the autograder. \n- For the .dequeue() and .peek() methods, ensure that your code will return a `null` value if the queue is empty.\n- For the .allNodesString() method, ensure that you **BOTH RETURN AND PRINT** a visual representation of the queue (i.e. a newline between each element such that the next element to be popped is on the \"bottom\").\n- For this implementation, users must be able to queue either fully formed Nodes or values -- if a value is not input as a Node, encapsulate it in a Node before queueing it.\n\nEach method has more specific instructions written in a comment.  You are given the Node class.",
+   "command": "python .guides/secure/create_queue_helper.py",
+   "arePartialPointsAllowed": false,
+   "timeoutSeconds": 40,
+   "guidance": "```\npublic class CreateQueue {\n  public static void main(String[] args) {\n    //Instantiate and test your class here!\n\n  }\n}\n\nclass DIYQueue<T> {\n  \n  Node<T> first_node;\n  Node<T> last_node;\n  \n  public DIYQueue() {\n    //Fill in the constructor for your stack here if necessary\n    first_node = null;\n    last_node = null;\n  }\n  \n  public void queue(Node<T> new_node) {\n    //This method should queue a new Node\n    if (first_node == null) first_node = new_node;\n    if (last_node != null) {\n      last_node.next = new_node;\n      new_node.prev = last_node;\n    }\n    last_node = new_node;\n  }\n  \n  public void queue(T value) {\n    //This method should queue a value (by creating a Node containing the value and pushing that behind the scenes)\n    Node<T> new_node = new Node<T>(value);\n    this.queue(new_node);\n  }\n  \n  public T dequeue() {\n    //This method should remove the next element from the queue\n    Node<T> temp_node = first_node;\n    if (last_node == first_node) last_node = null;\n    if (temp_node == null) return null;\n    first_node = first_node.next;\n    if (first_node != null) first_node.prev = null;\n    return temp_node.value;\n  }\n  \n  public T peek() {\n    //This method should return the value of the next element w/o removing it\n    if (first_node == null) return null;\n    return first_node.value;\n  }\n  \n  public String allNodesString() {\n    //Create a string representation of the queue.\n    //There should be a newline between each element,\n    //and the one on the bottom should be the next one\n    //to be removed.\n    //So if the user queued 1 and then 2, this method should\n    //RETURN AND PRINT OUT the following:\n    //2\n    //1\n    Node<T> temp_node = last_node;\n    StringBuilder sb = new StringBuilder();\n    while(temp_node != null) {\n       sb.append(temp_node.value.toString());\n       sb.append(\"\\n\");\n       temp_node = temp_node.prev;\n    }\n     return sb.toString();\n  }\n}\n\nclass Node<T> {\n  T value;\n  Node<T> prev;\n  Node<T> next;\n  \n  public Node(T val) {\n    value = val;\n  }\n  \n}\n```\nThe above solution works because it does the following:\n\n- Queue method correctly enqueues a new node and works when the user inputs either a value or a Node\n- Dequeue method correctly pops the first node from the queue & returns its value\n- Peek method correctly returns the first node's value\n- Dequeue and peek methods account for possible empty queues\n- The class uses instances of the existing Node class\n- Node String method correctly uses string concatenation to return a visual representation of the queue in string form\n- The class does not extend another class – all the implementations are done independently",
+   "showGuidanceAfterResponse": true,
+   "points": 3,
+   "oneTimeTest": true,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     },
+     {
+      "name": "Content",
+      "value": "Creating/Designing Queues"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Java"
+     },
+     {
+      "name": "Category",
+      "value": "Stacks & Queues"
+     }
+    ],
+    "files": [
+     "code/CreateQueue.java",
+     ".guides/secure/create_queue_helper.py",
+     ".guides/secure/QueueCodeTest.java",
+     ".guides/secure/queues.sh",
+     ".guides/secure/runqueue.sh"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/CreateQueue.java"
+     },
+     {
+      "type": "terminal",
+      "panelNumber": 1,
+      "content": ""
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT create a queue class in Java"
+  }
+ }
+]

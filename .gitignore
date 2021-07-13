@@ -1,0 +1,8 @@
+.guides/secure/*.class
+code/*.class
+.guides/secure/ArrayConversion.java
+.guides/secure/BalancedParen.java
+.guides/secure/CreateArrayList.java
+.guides/secure/CreateNode.java
+.guides/secure/CreateQueue.java
+.guides/secure/StackMain.java
