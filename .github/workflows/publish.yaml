@@ -1,0 +1,24 @@
+name: codio-publish
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Install zstd
+      run: sudo apt install zstd
+
+    - uses: codio/codio-assessment-publish-action
+      with:
+        client-id: ${{ secrets.CODIO_CLIENT_ID }}
+        secret-id: ${{ secrets.CODIO_SECRET_ID }}
+        library-id: 8a58b05c-728f-4577-bf42-2e14c3e83e23 
+        dir: ./
+        domain: codiodev.com
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Autocommit assessments.json
