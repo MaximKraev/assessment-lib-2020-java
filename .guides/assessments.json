@@ -126,6 +126,14 @@
      {
       "name": "Category",
       "value": "ArrayLists"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "a5f32dca-85e6-4a7d-a0cc-9c62dab101c4"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "a01514e5d60ba36d54919b28be104bed0c38c9e3"
      }
     ],
     "files": [
@@ -178,6 +186,14 @@
      {
       "name": "Category",
       "value": "ArrayLists"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "39f3cadd-4dad-4e96-9497-f5aed43e48bb"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "a633e53ff07f24807ca8fe453ec0c804bfa1b6de"
      }
     ],
     "files": [
@@ -220,6 +236,14 @@
      {
       "name": "Category",
       "value": "Arrays"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "336e4312-075c-4394-a166-eeb23a9840d8"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "b64cec79b79ed1b39889d0322b0d80bcdaa8c364"
      }
     ],
     "files": [
@@ -724,6 +748,14 @@
      {
       "name": "Category",
       "value": "Hash Tables"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "f6a6628d-924b-4149-86ee-572487919939"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "720aecb6c37987940869dcb1c4334537e410ed39"
      }
     ],
     "files": [
@@ -1007,6 +1039,14 @@
      {
       "name": "Category",
       "value": "Stacks"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "94fd6426-5e22-4835-952f-6d50bff2da88"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "689ecb48c8bdd2148c9ddeffda7cc5b58ca8468f"
      }
     ],
     "files": [
@@ -1064,6 +1104,14 @@
      {
       "name": "Category",
       "value": "Linked Lists"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "0e50db77-3287-43e9-8dc1-b7e2e6e3cad8"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "6a14a0f1685d178368906518b1bb61bfe192cb12"
      }
     ],
     "files": [
@@ -1260,6 +1308,14 @@
      {
       "name": "Category",
       "value": "Stacks and Queues"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "c05ea017-232a-41b3-ba1f-27e80911d285"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "b6dd4331c56378bd502fc348f570f433519ef7f0"
      }
     ],
     "files": [
@@ -1363,6 +1419,14 @@
      {
       "name": "Category",
       "value": "Trees"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "d6f0f096-867f-4628-afe7-98322d93a093"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "c73a6fe7f57ad1feccec93f6fd87fa9ca5d85ce8"
      }
     ],
     "files": [
@@ -1549,6 +1613,14 @@
      {
       "name": "Category",
       "value": "Stacks & Queues"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "cf89aed7-fd8a-44fd-9875-a2040e8398a9"
+     },
+     {
+      "name": "CODIO_API_HASH",
+      "value": "4452de4eaf21b55626e1cc5e3542488d03378f47"
      }
     ],
     "files": [
