@@ -17,7 +17,7 @@ jobs:
       with:
         client-id: ${{ secrets.CODIO_CLIENT_ID }}
         secret-id: ${{ secrets.CODIO_SECRET_ID }}
-        library-id: 4a10e8ab-de57-4c95-8075-135eaff683e5
+        library-id: Max Library
         dir: ./
         domain: codio.com
 
