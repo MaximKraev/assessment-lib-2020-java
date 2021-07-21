@@ -17,9 +17,9 @@ jobs:
       with:
         client-id: ${{ secrets.CODIO_CLIENT_ID }}
         secret-id: ${{ secrets.CODIO_SECRET_ID }}
-        library-id: 8a58b05c-728f-4577-bf42-2e14c3e83e23 
+        library-id: Max Library
         dir: ./
-        domain: codiodev.com
+        domain: codio.com
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
