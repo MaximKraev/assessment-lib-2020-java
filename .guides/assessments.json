@@ -10,7 +10,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "This code starts by creating an array of size 15 (30/2 = 15 odd numbers). Note that this is done with the code ```int[] oddNums = new int[15]```, being sure to specify the data type and size of the array. Then, the code uses a for loop and a counting variable ```x``` to fill each index of the array with the next successive odd number. (There are a lot of ways to do this part, but none of the other ways were included in the options here.) Finally, it prints out the third element, which is index 2 because array indices begin at 0.",
-   "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
    "metadata": {
@@ -44,7 +43,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT use a for loop to create an array with a range of odd numbers."
+   "learningObjectives": "SWBAT use a for loop to create an array with a range of odd numbers.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -58,7 +60,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "```\nint[] my_array = {1, 2, 3, 4, 5, 6};\nmy_array[0] *= 42;\nmy_array[1] = 37;\nmy_array[2] += 6;\nmy_array[3]--;\nmy_array[4] = 215;\n```\n\nThese pieces of code make the right modifications to the array values so that the final result is {42, 37, 9, 3, 215, 6}. Note that indices start at 0 and that you can use operators such as *= and += on array indices.",
-   "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
    "metadata": {
@@ -92,7 +93,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT modify an array to certain requirements."
+   "learningObjectives": "SWBAT modify an array to certain requirements.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -106,7 +110,6 @@
    "arePartialPointsAllowed": false,
    "timeoutSeconds": 40,
    "guidance": "```\nimport java.util.*;\nimport java.io.*;\n\npublic class CreateArrayList {\n  public static void main(String[] args) throws IOException {\n    int result1, result2;\n    \n    //Save the first number you print into result1.\n    //Save the second number you print into result2.\n    \n    ArrayList<Integer> my_array_list = new ArrayList<>();\n    my_array_list.add(93);\n    my_array_list.add(321);\n    result1 = my_array_list.get(1);\n    System.out.println(result1);\n    my_array_list.remove(my_array_list.indexOf(321));\n    my_array_list.add(73);\n    my_array_list.add(42);\n    my_array_list.add(16);\n    result2 = my_array_list.get(2);\n    System.out.println(result2);\n    \n    //DO NOT TOUCH THE BELOW CODE!\n    PrintWriter pw = new PrintWriter(new FileWriter(\"output.txt\"));\n    pw.println(result1);\n    pw.println(result2);\n    pw.close();\n  }\n\n}\n```\n\nThis solution uses the following ArrayList methods to follow each of the steps described in order.\n- .add() in order to add new elements\n- .get() in order to retrieve and print out certain elements (although there were a couple ways you could have done this)\n- .remove() in order to remove elements",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -152,7 +155,10 @@
     ]
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT create and make modifications to an ArrayList."
+   "learningObjectives": "SWBAT create and make modifications to an ArrayList.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -166,7 +172,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "```\nArrayList<Character> charAL = new ArrayList<>();\nfor (char c : \"HAPPY BIRTHDAY\".toCharArray()) charAL.add(c);\nSystem.out.println(charAL.get(charAL.indexOf('D')));\n```\n\nThis solution works because it:\n- Initializes the ArrayList correctly (using data type and the ```new``` keyword)\n- Uses a string and a char[] correctly to transfer the characters into the ArrayList (For a shortcut, you could have also used a method like Arrays.asList(), but that wasn't an option here.)\n- Prints the letter D by using the .get() method with the index of D as a parameter.",
-   "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
    "metadata": {
@@ -202,7 +207,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT make an ArrayList of the characters in Happy Birthday and then printing out a certain letter from the list."
+   "learningObjectives": "SWBAT make an ArrayList of the characters in Happy Birthday and then printing out a certain letter from the list.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -216,7 +224,6 @@
    "arePartialPointsAllowed": false,
    "timeoutSeconds": 40,
    "guidance": "```\nimport java.util.*;\n\npublic class ArrayConversion {\n  public static void main(String[] args) {\n    arrayConverter(args);//Use this for testing! Don't put anything else in the main method -- all your code should be in arrayConverter().\n  }\n  static int arrayConverter(String[] args) {\n    int[] randomNums = new int[args.length];\n    for (int i = 0; i < args.length; i++) {\n      randomNums[i] = Integer.parseInt(args[i])*3;\n    }\n    return randomNums[5];\n  }\n}\n```\n\nThis is one possible solution. It creates a new int array of the same length as ```args```, and uses ```Integer.parseInt()``` to convert the strings to integers, after which it multiplies them by 3. It correctly recognizes that the sixth number in the array would actually be at index 5 and returns that number accordingly. ",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -264,7 +271,10 @@
     ]
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT convert a String[] to an int[] and return a certain element."
+   "learningObjectives": "SWBAT convert a String[] to an int[] and return a certain element.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -278,7 +288,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":3,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "To find the next node connected to the current one, the function must return the `next` instance variable of the Node object. In Java, this is done by returning this.nextNode.",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -312,7 +321,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT utilize a Node class to retrieve the next node of a linked list."
+   "learningObjectives": "SWBAT utilize a Node class to retrieve the next node of a linked list.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -326,7 +338,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "The following solution works because:\n- First, the new node will point to what the existing node in the list used to point to.\n- Next, the existing node will point to the new element instead.\n\n```java\nvoid InsertAfter(int data, Node ExistingNode) {\n   Node NewNode = new Node(data);\n   NewNode.nextVal = ExistingNode.nextVal;\n   ExistingNode.nextVal = NewNode;\n}\n```",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -354,7 +365,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT insert elements into linked lists in Java"
+   "learningObjectives": "SWBAT insert elements into linked lists in Java",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -368,7 +382,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "The following solution sets the previous node's ```.nextVal``` to the next node after ExistingNode, effectively changing the sequence so it skips the one we want to remove.\n\n\n```java\npublic void RemoveNode(Node ExistingNode, Node PrevNode) {\n   PrevNode.nextVal = ExistingNode.nextVal;\n   ExistingNode = null;\n}\n``` ",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -402,7 +415,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT remove an element from a linked list in Java"
+   "learningObjectives": "SWBAT remove an element from a linked list in Java",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -436,7 +452,6 @@
     }
    ],
    "guidance": "",
-   "showGuidanceAfterResponse": false,
    "showExpectedAnswer": true,
    "points": 20,
    "incorrectPoints": 0,
@@ -463,7 +478,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "1",
-   "learningObjectives": "SWBAT understand array memory location"
+   "learningObjectives": "SWBAT understand array memory location",
+   "showGuidanceAfterResponseOption": {
+    "type": "Never"
+   }
   }
  },
  {
@@ -497,7 +515,6 @@
     }
    ],
    "guidance": "A variable of the same type will is are variables that are either whole numbers, text, or decimals.",
-   "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 20,
    "incorrectPoints": 0,
@@ -524,7 +541,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "2",
-   "learningObjectives": "SWBAT understand the between types of variables"
+   "learningObjectives": "SWBAT understand the between types of variables",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -536,7 +556,6 @@
    "instructions": "Based on what you please fill in the blank.",
    "text": "In most programming language an array index will start at the #<<<0>>>.",
    "guidance": "The first element of most programming languages will start at 0. If you are putting 10 elements in the array then the last element will have a location 9. ",
-   "showGuidanceAfterResponse": false,
    "showExpectedAnswer": true,
    "points": 2,
    "showValues": false,
@@ -574,6 +593,9 @@
      "."
     ],
     "regexPositions": []
+   },
+   "showGuidanceAfterResponseOption": {
+    "type": "Never"
    }
   }
  },
@@ -608,7 +630,6 @@
     }
    ],
    "guidance": "",
-   "showGuidanceAfterResponse": false,
    "showExpectedAnswer": true,
    "points": 20,
    "incorrectPoints": 0,
@@ -635,7 +656,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "1",
-   "learningObjectives": "SWBAT remember what are the uses of an array"
+   "learningObjectives": "SWBAT remember what are the uses of an array",
+   "showGuidanceAfterResponseOption": {
+    "type": "Never"
+   }
   }
  },
  {
@@ -649,7 +673,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "```\nHashtable<String, Integer> student_nums = new Hashtable<String, Integer>();\nstudent_nums.put(\"Jane\", 498);\nstudent_nums.put(\"John\", 132);\nstudent_nums.put(\"Sarah\", 396);\n```\nThis answer is correct because it initializes the Hashtable correctly using data types, and uses the correct method (.put()) to add items to it.",
-   "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
    "metadata": {
@@ -683,7 +706,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "2",
-   "learningObjectives": "SWBAT identify the right ways to add items to a hash table."
+   "learningObjectives": "SWBAT identify the right ways to add items to a hash table.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -697,7 +723,6 @@
    "preExecuteCommand": "",
    "arePartialPointsAllowed": false,
    "guidance": "```\nimport java.util.*;\nimport java.io.*;\n\npublic class FindHashTable {\n  public static void main (String[] args) {\n    \n    //INPUT CODE -- don't modify!\n    Hashtable<String, Integer> fave_nums = new Hashtable<String, Integer>();\n    for (int i = 0; i < args.length; i += 2) {\n      fave_nums.put(args[i], Integer.parseInt(args[i + 1]));\n    }\n    \n    //Your code here (the Hashtable is called fave_nums)\n    System.out.println(fave_nums.get(\"Jane\"));\n    \n  }\n\n}\n```\n\nThe above solution calls the ```.get()``` method on the Hashtable. This method automatically returns ```null``` if the requested key is not on the list. ",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "options": {
@@ -771,7 +796,10 @@
     ]
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT call .get() on a HashTable."
+   "learningObjectives": "SWBAT call .get() on a HashTable.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -785,7 +813,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "```\nint popped_item = my_stack.pop();\nmy_stack.push(6);\nmy_stack.push(5);\nmy_stack.push(4);\nmy_stack.push(popped_item);\n```\n\nThe following solution works because it does the following:\n- Successfully pops 3 from the top of the stack (and saves it into the variable ```popped_item```)\n- Pushes the next three numbers onto the top of the stack correctly\n- Pushes 3 correctly onto the top of the stack (again, the only line of code available that correctly pushed 3 onto the stack was the one that used ```popped_item```)\n- Does not use queue methods ```.add()``` or ```.remove()``` on a stack\n- Does not try to pass a parameter into ```.pop()```",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -819,7 +846,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT call .push() and .pop() on a stack."
+   "learningObjectives": "SWBAT call .push() and .pop() on a stack.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -853,7 +883,6 @@
     }
    ],
    "guidance": "```\nSystem.out.println(stack1.search(a));\n```\nThe following answer correctly calls the ```.search()``` method on the stack with ```a``` as a parameter.",
-   "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
    "incorrectPoints": 0,
@@ -888,7 +917,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "1",
-   "learningObjectives": "SWBAT recall how to search a stack."
+   "learningObjectives": "SWBAT recall how to search a stack.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -902,7 +934,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "```\nint removed_item = my_queue.remove();\nmy_queue.add(6);\nmy_queue.add(5);\nmy_queue.add(4);\nmy_queue.add(removed_item);\n```\nThe above solution works because it does the following:\n- Successfully removes 1 from the start of the queue (and saves it into the variable removed_item)\n- Adds the next 3 elements in their correct order\n- Adds 1 back into the queue (the only line that accomplished this was the one that used removed_item)\n- Does not use stack methods ```.push()``` or ```.pop()```\n- Uses parameters accurately (uses them on ```.add()```, but not on ```.remove()```)\n",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -936,7 +967,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT add and remove elements in a queue."
+   "learningObjectives": "SWBAT add and remove elements in a queue.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -970,7 +1004,6 @@
     }
    ],
    "guidance": "```\nSystem.out.println(my_queue.peek());\n```\nThe correct method to return the first element or \"head\" of the queue, and return null in an empty queue, is ```.peek()```. ```.element()``` will also return the head of the queue, but it throws an exception if there are no elements in the queue.",
-   "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
    "incorrectPoints": 0,
@@ -1005,7 +1038,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "1",
-   "learningObjectives": "SWBAT recall how to get the first element in a queue."
+   "learningObjectives": "SWBAT recall how to get the first element in a queue.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1019,7 +1055,6 @@
    "arePartialPointsAllowed": false,
    "timeoutSeconds": 40,
    "guidance": "```\npublic class StackMain {\n  public static void main(String[] args) {\n    //Instantiate and test your class here!\n  }\n}\n\nclass DIYStack<T> {\n  \n  Node<T> first_node;\n  \n  public DIYStack() {\n    //Fill in the constructor for your stack here if necessary\n    first_node = null;\n  }\n  \n  public void push(Node<T> new_node) {\n    //This method should push a new Node onto the stack\n    if (first_node != null) {\n      first_node.prev = new_node;\n      new_node.next = first_node;\n    }\n    first_node = new_node;\n  }\n  \n  public void push(T value) {\n    //This method should push a value onto the stack (by creating a Node containing the value and pushing that behind the scenes)\n    Node<T> new_node = new Node<T>(value);\n    this.push(new_node);\n  }\n  \n  public T pop() {\n    //This method should pop the next element from the stack\n    Node<T> temp_node = first_node;\n    if (temp_node == null) return null;\n    first_node = first_node.next;\n    if (first_node != null) first_node.prev = null;\n    return temp_node.value;\n  }\n  \n  public T peek() {\n    //This method should return the value of the next element w/o removing it\n    if (first_node == null) return null;\n    return first_node.value;\n  }\n  \n  public String allNodesString() {\n   //This method should return a string containing the values of all the nodes,\n   //starting at the next element to be popped, with a new line between each node\n   Node<T> temp_node = first_node;\n   StringBuilder sb = new StringBuilder();\n   while(temp_node != null) {\n     sb.append(temp_node.value.toString());\n     sb.append(\"\\n\");\n     temp_node = temp_node.next;\n   }\n   return sb.toString();\n  }\n\n}\n\nclass Node<T> {\n  T value;\n  Node<T> prev;\n  Node<T> next;\n  \n  public Node(T val) {\n    value = val;\n  }\n  \n}\n```\n\nThe following solution works because it does the following:\n- Push method correctly pushes a new node onto the stack\n- Pop method correctly pops the first node from the stack & returns its value\n- Peek method correctly returns the first node\n- Pop and peek methods account for possible empty stacks\n- The class uses instances of the existing Node class, and generic types are used throughout\n- Node String method correctly uses a StringBuilder to return a visual representation of the stack in string form\n- The class does not extend another class -- all the implementations are done independently",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -1070,7 +1105,10 @@
     ]
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT implement a Stack data structure"
+   "learningObjectives": "SWBAT implement a Stack data structure",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1084,7 +1122,6 @@
    "arePartialPointsAllowed": false,
    "timeoutSeconds": 40,
    "guidance": "Here is one possible solution:\n\n```java\npublic class CreateNode {\n  public static void main(String[] args) {\n    //Test-call your method here!\n  }\n  \n  public static String nodeName() {\n    //Your Code Here\n    Node my_node = new Node(\"Maria\", null);\n    return my_node.name;\n  }\n  \n  static class Node {\n    //Make sure you assign values to the below instance variables in your constructor!\n    String name;\n    Node next;\n    \n    Node(String name, Node next) {\n      this.name = name;\n      this.next = next;\n    }\n  }\n}\n```\n\nNote that this example does the following:\n- Creates a `Node` class\n- Defines a constructor that assigns `this.name` and `this.next`\n- Uses the constructor properly and assigns it to a variable\n- Returns the ```name``` property of the object",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -1129,7 +1166,10 @@
     ]
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT create a node class in Java"
+   "learningObjectives": "SWBAT create a node class in Java",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1143,7 +1183,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "The code should look like:\n```python\nNode node_150 = new Node(150, None);\nNode node_10 = new Node(10, node_150);\nNode node_204 = new Node(204, node_10);\nNode node_109 = new Node(109, node_204);\nNode node_90 = new Node(90, node_109);\n```\n\nThe `next` parameter of each constructor call should contain the next node in the linked list. As each node is assigned to a variable, the node must be created before another constructor uses it. The linked list is essentially created backward, with the first node being 90 and ending with 150. The last node's `next` should be `None` because it should not link to another node. ",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -1171,7 +1210,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT use nodes to create a linked list"
+   "learningObjectives": "SWBAT use nodes to create a linked list",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1185,7 +1227,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"trashId\":\"sortableTrash\"}",
    "grader": "1",
    "guidance": "The code should look like the following:\n```java\nstatic class LinkedList {\n  Node head;\n  LinkedList(Node head_node) {\n    head = head_node;\n  }\n}\n```\n\nNote that the constructor must take in a node to use as the head of the linked list. The constructor here does that by having `head_node` as a parameter and assigning `head` to it.",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -1213,7 +1254,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT create a linked list class in Java"
+   "learningObjectives": "SWBAT create a linked list class in Java",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1225,7 +1269,6 @@
    "instructions": "Given the following contract, fill in the blank to create a linked list of length 4.\n\n```java\nnew Node(T data, Node next_node)\n```",
    "text": "Node last_node = new Node(\"Yellow\", <<<null>>>);\nNode 3_node = new Node(\"Green\", <<<last_node>>>);\nNode 2_node = new Node(\"Blue\", <<<3_node>>>);\nNode first_node = new Node(\"Red\", <<<2_node>>>);",
    "guidance": "Each node's constructor should take in the previously created node to form the linked list.",
-   "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
    "showValues": false,
@@ -1274,6 +1317,9 @@
      ");"
     ],
     "regexPositions": []
+   },
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
    }
   }
  },
@@ -1288,7 +1334,6 @@
    "arePartialPointsAllowed": false,
    "timeoutSeconds": 40,
    "guidance": "Here is one potential solution:\n```java\nstatic boolean paren_balanced(String s) {\n    //Your code here\n    \n    Stack<Character> pstack = new Stack<Character>();\n    \n    int len = s.length();\n    char[] string_s = s.toCharArray();\n    \n    for(int i = 0; i < len; i++) {\n        if (string_s[i] == '(') pstack.push(string_s[i]);\n        if (string_s[i] == ')') { \n          if (pstack.isEmpty()) return false;\n          else {\n            char top_elem = pstack.pop();\n            if (top_elem == ')') return false;\n          } \n        }\n    }\n    return pstack.isEmpty();\n            \n  }\n  \n}\n```\n\nThe solution above works because:\n* The code iterates through the input string. \n* When the code encounters an open parenthesis, the code pushes the parenthesis to the stack. \n* When the code encounters a closed parenthesis, the code checks to see whether a matching open parenthesis is on the top of the stack. If the stack is empty or there is no matching open parenthesis, the code returns False because the input string was not balanced.\n* If the code has iterated through each character of the string and the stack is empty, this means that the parentheses were balanced and the code returns True.\n",
-   "showGuidanceAfterResponse": true,
    "points": 6,
    "oneTimeTest": true,
    "metadata": {
@@ -1339,7 +1384,10 @@
     ]
    },
    "bloomsObjectiveLevel": "6",
-   "learningObjectives": "SWBAT leverage understanding of stacks to determine whether parentheses are balanced in a string"
+   "learningObjectives": "SWBAT leverage understanding of stacks to determine whether parentheses are balanced in a string",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1398,7 +1446,6 @@
     }
    ],
    "guidance": "The five types of tree traversals are postorder, preorder, inorder, level order, and reverse level order. ",
-   "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
    "incorrectPoints": 0,
@@ -1435,7 +1482,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "1",
-   "learningObjectives": "SWBAT remember the types of tree traversals."
+   "learningObjectives": "SWBAT remember the types of tree traversals.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1449,7 +1499,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\"}",
    "grader": "1",
    "guidance": "```\nSystem.out.println(starterNode.value);\nif (starterNode.left != null) traverseNode(starterNode.left);\nif (starterNode.right != null) traverseNode(starterNode.right);\n```\nThe following solution visits the node in question first and then traverses its left and right nodes. ",
-   "showGuidanceAfterResponse": true,
    "points": 2,
    "oneTimeTest": true,
    "metadata": {
@@ -1483,7 +1532,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "2",
-   "learningObjectives": "SWBAT understand the preorder method of tree traversal."
+   "learningObjectives": "SWBAT understand the preorder method of tree traversal.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1497,7 +1549,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\"}",
    "grader": "1",
    "guidance": "```java\nif (starterNode.left != null) traverseNode(starterNode.left);\nif (starterNode.right != null) traverseNode(starterNode.right);\nSystem.out.println(starterNode.value);\n```\nThe above solution works because it first recursively traverses the left and right nodes before visiting the node in question itself.",
-   "showGuidanceAfterResponse": true,
    "points": 2,
    "oneTimeTest": true,
    "metadata": {
@@ -1531,7 +1582,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "2",
-   "learningObjectives": "SWBAT understand the postorder method of tree traversal."
+   "learningObjectives": "SWBAT understand the postorder method of tree traversal.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1545,7 +1599,6 @@
    "options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\"}",
    "grader": "1",
    "guidance": "```\nif (starterNode.left != null) traverseNode(starterNode.left);\nSystem.out.println(starterNode.value);\nif (starterNode.right != null) traverseNode(starterNode.right);\n```\n\nThe above solution works because it traverses the left subtree, visits the node, and then moves onto the right subtree.",
-   "showGuidanceAfterResponse": true,
    "points": 2,
    "oneTimeTest": true,
    "metadata": {
@@ -1579,7 +1632,10 @@
     "opened": []
    },
    "bloomsObjectiveLevel": "2",
-   "learningObjectives": "SWBAT understand the inorder method of tree traversal."
+   "learningObjectives": "SWBAT understand the inorder method of tree traversal.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
  },
  {
@@ -1593,7 +1649,6 @@
    "arePartialPointsAllowed": false,
    "timeoutSeconds": 40,
    "guidance": "```\npublic class CreateQueue {\n  public static void main(String[] args) {\n    //Instantiate and test your class here!\n\n  }\n}\n\nclass DIYQueue<T> {\n  \n  Node<T> first_node;\n  Node<T> last_node;\n  \n  public DIYQueue() {\n    //Fill in the constructor for your stack here if necessary\n    first_node = null;\n    last_node = null;\n  }\n  \n  public void queue(Node<T> new_node) {\n    //This method should queue a new Node\n    if (first_node == null) first_node = new_node;\n    if (last_node != null) {\n      last_node.next = new_node;\n      new_node.prev = last_node;\n    }\n    last_node = new_node;\n  }\n  \n  public void queue(T value) {\n    //This method should queue a value (by creating a Node containing the value and pushing that behind the scenes)\n    Node<T> new_node = new Node<T>(value);\n    this.queue(new_node);\n  }\n  \n  public T dequeue() {\n    //This method should remove the next element from the queue\n    Node<T> temp_node = first_node;\n    if (last_node == first_node) last_node = null;\n    if (temp_node == null) return null;\n    first_node = first_node.next;\n    if (first_node != null) first_node.prev = null;\n    return temp_node.value;\n  }\n  \n  public T peek() {\n    //This method should return the value of the next element w/o removing it\n    if (first_node == null) return null;\n    return first_node.value;\n  }\n  \n  public String allNodesString() {\n    //Create a string representation of the queue.\n    //There should be a newline between each element,\n    //and the one on the bottom should be the next one\n    //to be removed.\n    //So if the user queued 1 and then 2, this method should\n    //RETURN AND PRINT OUT the following:\n    //2\n    //1\n    Node<T> temp_node = last_node;\n    StringBuilder sb = new StringBuilder();\n    while(temp_node != null) {\n       sb.append(temp_node.value.toString());\n       sb.append(\"\\n\");\n       temp_node = temp_node.prev;\n    }\n     return sb.toString();\n  }\n}\n\nclass Node<T> {\n  T value;\n  Node<T> prev;\n  Node<T> next;\n  \n  public Node(T val) {\n    value = val;\n  }\n  \n}\n```\nThe above solution works because it does the following:\n\n- Queue method correctly enqueues a new node and works when the user inputs either a value or a Node\n- Dequeue method correctly pops the first node from the queue & returns its value\n- Peek method correctly returns the first node's value\n- Dequeue and peek methods account for possible empty queues\n- The class uses instances of the existing Node class\n- Node String method correctly uses string concatenation to return a visual representation of the queue in string form\n- The class does not extend another class – all the implementations are done independently",
-   "showGuidanceAfterResponse": true,
    "points": 3,
    "oneTimeTest": true,
    "metadata": {
@@ -1644,7 +1699,82 @@
     ]
    },
    "bloomsObjectiveLevel": "3",
-   "learningObjectives": "SWBAT create a queue class in Java"
+   "learningObjectives": "SWBAT create a queue class in Java",
+   "showGuidanceAfterResponseOption": {
+    "type": "Always"
+   }
   }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-3380126305",
+  "source": {
+   "name": "Python - Comparing Strings 2.0",
+   "showName": true,
+   "instructions": "What will be stored in the variable `diff` after the following code is executed?\n```python\n\nasd\ngreetingOne = \"Hello there!\"\ngreetingTwo = \"General Kenobi\"\n\ndiff = greetingOne > greetingTwo\n```",
+   "multipleResponse": false,
+   "isRandomized": false,
+   "answers": [
+    {
+     "_id": "368e8605-9c20-c156-d595-377df9324bb8",
+     "correct": false,
+     "answer": "A compilation error would occur"
+    },
+    {
+     "_id": "7701fef7-e225-a353-bc4b-4a1d69c45cb8",
+     "correct": true,
+     "answer": "`True`"
+    },
+    {
+     "_id": "8523df73-66ae-f75a-4431-489430b9fdef",
+     "correct": false,
+     "answer": "`False`"
+    },
+    {
+     "_id": "a8f65189-d8f2-34a3-fbaf-e5289c22cbb0",
+     "correct": false,
+     "answer": "`1`"
+    }
+   ],
+   "guidance": "In Python, string comparisons are performed alphabetically (or lexicographically). To compare two strings, Python's implementation iterates through each index, stopping when the characters at that index are different between the two strings or when that index has exceeded the bounds of any of the strings. In this case, since the two strings begin with different characters, we only need to look at the first letter to examine what the output will be. Since `\"H\"` comes after `\"G\"` in the alphabet, `greetingOne` is considered greater than `greetingTwo`, so the value of `diff` would be `True`.",
+   "showGuidanceAfterResponseOption": {
+    "type": "Never"
+   },
+   "showExpectedAnswer": true,
+   "points": 20,
+   "incorrectPoints": 0,
+   "arePartialPointsAllowed": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Category",
+      "value": "Strings"
+     },
+     {
+      "name": "Content",
+      "value": "String Comparison"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "CODIO_API_ID",
+      "value": "36d43640-fec8-4e89-99fd-6a1932866c8e"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "3",
+   "learningObjectives": "SWBAT understand how to compare strings in Python"
+  },
+  "linkedId": "76b7c576-50a4-4ed5-b961-e73c38183e56",
+  "libraryId": "7f9c49e5-5dbb-48ea-8006-6944447abbe6",
+  "version": 0
  }
 ]
